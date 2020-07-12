@@ -1,0 +1,65 @@
+{
+  "name": "@query-easy/mongo",
+  "version": "0.0.0",
+  "description": "A query builder for MongoDB, built to provide a rich and dynamic query building interface.",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "lint": "eslint \"lib/**/*.js\" \"test/**/*.js\"",
+    "test:nocov": "mocha \"test/**/*.test.js\" --exit -t 10000",
+    "test": "nyc mocha \"test/**/*.test.js\" --exit -t 10000",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "dependencies": {
+    "kindof": "^2.0.0",
+    "lodash": "^4.17.19"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.2",
+    "chai": "^4.2.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^6.8.0",
+    "faker": "^4.1.0",
+    "mocha": "^7.1.2",
+    "mongodb": "^3.5.9",
+    "nyc": "^15.1.0"
+  },
+  "peerDependencies": {
+    "mongodb": "^3.5.9"
+  },
+  "peerDependenciesMeta": {
+    "mongodb": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/query-easy/mongo.git"
+  },
+  "homepage": "https://github.com/query-easy/mongo",
+  "author": {
+    "name": "Akash Kansara",
+    "web": "https://github.com/akash-kansara"
+  },
+  "contributors": [],
+  "engines": {
+    "node": ">=10"
+  },
+  "keywords": [
+    "mongo",
+    "mongodb",
+    "query",
+    "mongo-query",
+    "mongo-query-builder",
+    "mongo query builder",
+    "query-easy",
+    "query-builder"
+  ],
+  "files": [
+    "README.md",
+    "lib/*",
+    "LICENSE",
+    "types/*"
+  ]
+}

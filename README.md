@@ -1,10 +1,10 @@
 # @query-easy/mongo
 [![GitHub version](https://badge.fury.io/gh/query-easy%2Fmongo.svg)](https://badge.fury.io/gh/query-easy%2Fmongo)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/query-easy/mongo.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/query-easy/mongo/context:javascript)
-[![dependencies Status](https://david-dm.org/query-easy/mongo/status.svg)](https://david-dm.org/query-easy/mongo)
-[![devDependencies Status](https://david-dm.org/query-easy/mongo/dev-status.svg)](https://david-dm.org/query-easy/mongo?type=dev)
 [![Build Status](https://travis-ci.com/query-easy/mongo.svg?branch=master)](https://travis-ci.com/query-easy/mongo)
 [![Coverage Status](https://coveralls.io/repos/github/query-easy/mongo/badge.svg?branch=master)](https://coveralls.io/github/query-easy/mongo?branch=master)
+[![dependencies Status](https://david-dm.org/query-easy/mongo/status.svg)](https://david-dm.org/query-easy/mongo)
+[![devDependencies Status](https://david-dm.org/query-easy/mongo/dev-status.svg)](https://david-dm.org/query-easy/mongo?type=dev)
 
 A query builder for [MongoDB](https://www.mongodb.com/), built to provide a rich and dynamic query building interface.
 

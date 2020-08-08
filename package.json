@@ -38,6 +38,9 @@
     "url": "git+https://github.com/query-easy/mongo.git"
   },
   "homepage": "https://github.com/query-easy/mongo",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "author": "Akash Kansara (https://github.com/akash-kansara)",
   "contributors": [],
   "engines": {

@@ -83,6 +83,15 @@ const query = qe('office_collection')
   .raw('sort', 'asc', 'name', 'age')
   .toQuery();
 
+// MongoDB Ex.
+let collection = mongodb().collection('office_collection');
+collection.find(
+  query.filter,
+  query.options
+).toArray((err, docs) => {
+  // do some stuff...
+})
+
 // Mongoose Ex.
 let filter = query.filter;
 let options = query.options;
@@ -93,19 +102,10 @@ delete options.projection;
 MongooseModel.find(filter, projection, options, (err, docs) => {
   // do some stuff...
 })
-
-// MongoDB Ex.
-let collection = mongodb().collection('office_collection');
-collection.find(
-  query.filter,
-  query.options
-).toArray((err, docs) => {
-  // do some stuff...
-})
 ```
 
 ### Full API matrix
 Refer [API.md](API.md)
 
 ### Notes
-This is a very young but battle tested repository. All APIs have undergone unit & integration testing with MongoDB server. This repository, in total, has 110+ test cases which cover all functions and their branches. Feel free to [fork](https://github.com/query-easy/mongo) this repo on GitHub.
+This is a very young but well tested repository. All APIs have undergone unit & integration testing with MongoDB server. Feel free to [fork](https://github.com/query-easy/mongo) this repo on GitHub.

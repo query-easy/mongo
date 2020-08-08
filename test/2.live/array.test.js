@@ -8,7 +8,7 @@ const testData = require('../1.seed/test-data');
 
 describe('it should perform array tests on server', () => {
   let collection;
-  it('should get collection', (done) => {
+  before((done) => {
     mongodb.connect('mongodb://localhost:27017/my_test_db', { useUnifiedTopology: true }, (dbErr, db) => {
       expect(dbErr).to.be.null;
       collection = db.db().collection('test');

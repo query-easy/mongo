@@ -58,6 +58,9 @@
       "optional": true
     }
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "pre-commit": [
     "build",
     "test",

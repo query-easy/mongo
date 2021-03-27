@@ -1,38 +1,69 @@
 {
   "name": "@query-easy/mongo",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A query builder for MongoDB, built to provide a rich and dynamic query building interface.",
   "license": "MIT",
-  "main": "lib/index.js",
-  "types": "types/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "lint": "eslint \"lib/**/*.js\" \"test/**/*.js\"",
-    "test:nocov": "mocha \"test/**/*.test.js\" --exit -t 10000",
-    "test": "nyc mocha \"test/**/*.test.js\" --exit -t 10000",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "postbuild": "rimraf dist/__tests__",
+    "clean": "rimraf dist coverage .nyc_output",
+    "coveralls": "npm run test && nyc report --reporter=text-lcov | coveralls",
+    "eslint": "eslint \"lib/**/*.ts\"",
+    "eslint:fix": "npm run lint -- --fix",
+    "lint": "npm run prettier && npm run eslint",
+    "lint:fix": "npm run prettier:fix && npm run eslint:fix",
+    "prepublish": "npm run build",
+    "prettier": "prettier \"lib/**/*.ts\" -c",
+    "prettier:fix": "prettier \"lib/**/*.ts\" -w",
+    "test": "nyc ts-mocha lib/__tests__/**/*.test.ts"
   },
   "dependencies": {
-    "kindof": "^2.0.0",
-    "lodash": "^4.17.19"
+    "kindof": "^2.0.0"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/mocha": "^8.2.2",
     "@types/node": "^13.13.2",
-    "chai": "^4.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "chai": "^4.3.4",
     "coveralls": "^3.1.0",
     "eslint": "^6.8.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-eslint-plugin": "^2.3.0",
+    "eslint-plugin-mocha": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "express": "^4.17.1",
     "faker": "^4.1.0",
-    "mocha": "^7.1.2",
-    "mongodb": "^3.5.9",
-    "nyc": "^15.1.0"
+    "mocha": "^7.2.0",
+    "nyc": "^15.1.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-mocha": "^8.0.0",
+    "typescript": "^4.2.3"
   },
   "peerDependencies": {
-    "mongodb": "^3.5.9"
+    "mongodb": "*",
+    "mongoose": "*"
   },
   "peerDependenciesMeta": {
     "mongodb": {
       "optional": true
+    },
+    "mongoose": {
+      "optional": true
     }
   },
+  "pre-commit": [
+    "build",
+    "test",
+    "lint"
+  ],
+  "precommit.silent": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/query-easy/mongo.git"
@@ -54,10 +85,9 @@
     "query-builder"
   ],
   "files": [
+    "dist",
     "README.md",
-    "lib/*",
-    "LICENSE",
-    "types/*"
+    "LICENSE"
   ],
   "bugs": {
     "url": "https://github.com/query-easy/mongo/issues"

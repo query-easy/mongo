@@ -13,8 +13,10 @@ let query = qe('office_collection')
   .raw('sort', ['name', 'age'])
   .toQuery();
 
+console.log(query);
 /*
-query = {
+Output:
+{
   filter: {
     character_name: 'Michael Scott',
     $or: [

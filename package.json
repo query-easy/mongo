@@ -67,10 +67,7 @@
     "lint"
   ],
   "precommit.silent": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/query-easy/mongo.git"
-  },
+  "repository": "git://github.com/query-easy/mongo.git",
   "homepage": "https://github.com/query-easy/mongo",
   "author": "Akash Kansara (https://github.com/akash-kansara)",
   "contributors": [],

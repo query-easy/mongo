@@ -15,6 +15,7 @@
     "eslint:fix": "npm run lint -- --fix",
     "lint": "npm run prettier && npm run eslint",
     "lint:fix": "npm run prettier:fix && npm run eslint:fix",
+    "prepublish": "npm run build",
     "prettier": "prettier \"lib/**/*.ts\" -c",
     "prettier:fix": "prettier \"lib/**/*.ts\" -w",
     "test": "nyc ts-mocha lib/__tests__/**/*.test.ts"

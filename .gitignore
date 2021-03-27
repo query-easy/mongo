@@ -2,6 +2,8 @@ yarn.lock
 package-lock.json
 node_modules
 npm-debug.log
+dist/
+coverage/
 
 # workspace
 .DS_Store

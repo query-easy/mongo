@@ -13,7 +13,6 @@ A query builder for [MongoDB](https://www.mongodb.com/), built to provide a rich
 - [Examples](#examples)
 - [Working with mongodb and mongoose](#working-with-mongodb-and-mongoose)
 - [Full API matrix](#full-api-matrix)
-- [Notes](#notes)
 
 ## Examples
 
@@ -94,6 +93,3 @@ MongooseModel.find(filter, projection, options, (err, docs) => {
 
 ### Full API matrix
 Refer [API.md](API.md)
-
-### Notes
-This is a very young but well tested repository. All APIs have undergone unit & integration testing with MongoDB server. Feel free to [fork](https://github.com/query-easy/mongo) this repo on GitHub.

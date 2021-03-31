@@ -1,6 +1,6 @@
 {
   "name": "@query-easy/mongo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A query builder for MongoDB, built to provide a rich and dynamic query building interface.",
   "license": "MIT",
   "main": "dist/index.js",

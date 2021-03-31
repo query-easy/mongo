@@ -57,9 +57,6 @@
       "optional": true
     }
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "pre-commit": [
     "build",
     "test",
@@ -77,11 +74,10 @@
     "mongo",
     "mongodb",
     "query",
-    "mongo-query",
-    "mongo-query-builder",
+    "mongo query",
     "mongo query builder",
     "query-easy",
-    "query-builder"
+    "query builder"
   ],
   "files": [
     "dist",
